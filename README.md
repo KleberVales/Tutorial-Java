@@ -21,6 +21,16 @@
 ```
    
 ### Sintaxe do Java
+1. Estrutura Básica
+2. 
+``` java
+  public class MinhaClasse {
+      public static void main(String[] args) {
+          System.out.println("Olá, Mundo!"); // Imprime uma mensagem no console
+      }
+  }
+
+```
 ### Programação Orientada a Objetos
 ### Maniputaçao de Strings
 ### Coleções e Arrays
