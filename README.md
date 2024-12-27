@@ -2,9 +2,17 @@
 
 ### Fundamentos da linguagem java
 1. Código-Fonte (.java)
-2. Compilação
-3. Máquina Virtual Java (JVM)
-4. Biblioteca Padrão (Java API)
+2. Compilador (javac)
+3. byte code (.class)
+4. Máquina Virtual Java (JVM)
+   
+                     código fonte (.java)
+                             |
+                             |
+                       Javac compiler
+                             |
+                      byte code (.class)
+   
 ### Sintaxe do Java
 ### Programação Orientada a Objetos
 ### Maniputaçao de Strings
