@@ -40,7 +40,7 @@ boolean ativo = true;    // Booleano (verdadeiro ou falso)
 String nome = "Kleber";  // Cadeia de caracteres (String)
 
 ```
-3. Estruturas Condicionais\
+3. Estruturas Condicionais
    
 if, else if, e else:
 ``` java
@@ -66,6 +66,33 @@ switch (dia) {
         System.out.println("Outro dia");
         break;
 }
+```
+4. Estruturas de Repetição
+for:
+```java
+
+for (int i = 0; i < 5; i++) {
+    System.out.println("Valor de i: " + i);
+}
+```
+while:
+```java
+
+int contador = 0;
+while (contador < 5) {
+    System.out.println("Contador: " + contador);
+    contador++;
+}
+```
+do-while:
+```java
+
+int contador = 0;
+do {
+    System.out.println("Contador: " + contador);
+    contador++;
+} while (contador < 5);
+
 ```
 
 ### Programação Orientada a Objetos
