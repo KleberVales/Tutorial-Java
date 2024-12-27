@@ -22,13 +22,22 @@
    
 ### Sintaxe do Java
 1. Estrutura Básica
-2. 
+   
 ``` java
   public class MinhaClasse {
       public static void main(String[] args) {
           System.out.println("Olá, Mundo!"); // Imprime uma mensagem no console
       }
   }
+
+```
+2. Variáveis
+``` java
+int numero = 10;         // Inteiro
+double pi = 3.14;        // Número decimal
+char letra = 'A';        // Caractere
+boolean ativo = true;    // Booleano (verdadeiro ou falso)
+String nome = "Kleber";  // Cadeia de caracteres (String)
 
 ```
 ### Programação Orientada a Objetos
