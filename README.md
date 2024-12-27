@@ -40,6 +40,17 @@ boolean ativo = true;    // Booleano (verdadeiro ou falso)
 String nome = "Kleber";  // Cadeia de caracteres (String)
 
 ```
+3. Estruturas Condicionais
+if, else if, e else:
+``` java
+int idade = 18;
+if (idade >= 18) {
+    System.out.println("Maior de idade.");
+} else {
+    System.out.println("Menor de idade.");
+}
+```
+
 ### Programação Orientada a Objetos
 ### Maniputaçao de Strings
 ### Coleções e Arrays
