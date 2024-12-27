@@ -13,6 +13,10 @@
                        Javac compiler
                              |
                       byte code (.class)
+                             |
+          ___________________|____________________
+         |                   |                   |
+  JVM Windows           JVM Linux             JVM Mac   
 
 ```
    
