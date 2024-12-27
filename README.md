@@ -94,6 +94,19 @@ do {
 } while (contador < 5);
 
 ```
+5. Métodos
+
+``` java
+public class MinhaClasse {
+    public static void main(String[] args) {
+        saudacao("Kleber");
+    }
+
+    public static void saudacao(String nome) {
+        System.out.println("Olá, " + nome);
+    }
+}
+```
 
 ### Programação Orientada a Objetos
 ### Maniputaçao de Strings
