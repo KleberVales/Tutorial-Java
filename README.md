@@ -125,10 +125,12 @@ public class Pessoa {
     }
 }
 ```
-7. Comentários
+7. Comentários\
 Os comentários são ignorados pelo compilador e ajudam a documentar o código.
 
-Linha única: // Este é um comentário
+Linha única: // 
+
+Este é um comentário
 Múltiplas linhas:
 ```java
 
