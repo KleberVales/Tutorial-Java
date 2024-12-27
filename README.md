@@ -41,6 +41,7 @@ String nome = "Kleber";  // Cadeia de caracteres (String)
 
 ```
 3. Estruturas Condicionais\
+   
 if, else if, e else:
 ``` java
 int idade = 18;
@@ -48,6 +49,22 @@ if (idade >= 18) {
     System.out.println("Maior de idade.");
 } else {
     System.out.println("Menor de idade.");
+}
+```
+
+switch:
+``` java
+int dia = 2;
+switch (dia) {
+    case 1:
+        System.out.println("Domingo");
+        break;
+    case 2:
+        System.out.println("Segunda-feira");
+        break;
+    default:
+        System.out.println("Outro dia");
+        break;
 }
 ```
 
