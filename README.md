@@ -107,6 +107,24 @@ public class MinhaClasse {
     }
 }
 ```
+6. Classes e Objetos
+``` java
+public class Pessoa {
+    String nome;
+    int idade;
+
+    public void apresentar() {
+        System.out.println("Meu nome é " + nome + " e tenho " + idade + " anos.");
+    }
+
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa();
+        pessoa.nome = "Kleber";
+        pessoa.idade = 25;
+        pessoa.apresentar();
+    }
+}
+```
 
 ### Programação Orientada a Objetos
 ### Maniputaçao de Strings
