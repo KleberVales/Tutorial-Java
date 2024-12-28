@@ -159,6 +159,32 @@ public class Pessoa {
     }
 }
 ```
+
+2. Herança
+- Definição: Uma classe pode herdar atributos e métodos de outra classe. A classe que herda é chamada de subclasse, enquanto a classe de onde se herda é a superclasse.
+- Exemplo em Java:
+
+``` java
+public class Animal {
+    public void comer() {
+        System.out.println("O animal está comendo.");
+    }
+}
+
+public class Cachorro extends Animal {
+    public void latir() {
+        System.out.println("O cachorro está latindo.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Cachorro dog = new Cachorro();
+        dog.comer(); // Herdado de Animal
+        dog.latir(); // Específico de Cachorro
+    }
+}
+```
 ### Maniputaçao de Strings
 ### Coleções e Arrays
 ### Entrada e Saida de dados
