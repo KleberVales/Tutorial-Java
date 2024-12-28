@@ -185,6 +185,30 @@ public class Main {
     }
 }
 ```
+3. Polimorfismo
+- Definição: Um mesmo método ou objeto pode assumir diferentes formas, dependendo do contexto.
+- Exemplo em Java:
+``` java
+public class Animal {
+    public void emitirSom() {
+        System.out.println("O animal emite um som.");
+    }
+}
+
+public class Gato extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O gato mia.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Gato(); // Polimorfismo
+        animal.emitirSom(); // Saída: "O gato mia."
+    }
+}
+```
 ### Maniputaçao de Strings
 ### Coleções e Arrays
 ### Entrada e Saida de dados
