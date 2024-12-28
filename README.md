@@ -142,6 +142,9 @@ Múltiplas linhas:
 A Programação Orientada a Objetos (POO) é um paradigma de programação baseado no conceito de objetos, que são instâncias de classes. Esses objetos encapsulam dados (atributos) e comportamentos (métodos), permitindo a modelagem de problemas do mundo real de forma mais intuitiva e modular.
 
 ### Princípios Fundamentais da POO
+
+1. Encapsulamento
+- Definição: Os detalhes internos de um objeto são ocultados, expondo apenas o necessário por meio de interfaces públicas. Isso protege os dados e controla o acesso a eles.
 ### Maniputaçao de Strings
 ### Coleções e Arrays
 ### Entrada e Saida de dados
