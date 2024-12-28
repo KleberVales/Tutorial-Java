@@ -263,6 +263,16 @@ public class Calculadora {
     }
 }
 ```
+4. Construtores: Métodos especiais usados para inicializar objetos.
+```java
+public class Pessoa {
+    String nome;
+
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+}
+```
 ### Maniputaçao de Strings
 ### Coleções e Arrays
 ### Entrada e Saida de dados
