@@ -255,6 +255,14 @@ public class Main {
     }
 }
 ```
+3. Métodos: Comportamentos de uma classe.
+```java
+public class Calculadora {
+    public int somar(int a, int b) {
+        return a + b;
+    }
+}
+```
 ### Maniputaçao de Strings
 ### Coleções e Arrays
 ### Entrada e Saida de dados
