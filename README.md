@@ -209,6 +209,28 @@ public class Main {
     }
 }
 ```
+4. Abstração
+- Definição: Simplificação da complexidade ao expor apenas os detalhes relevantes de um objeto. Em Java, isso é feito por meio de classes abstratas e interfaces.
+- Exemplo com Interface:
+``` java
+public interface Veiculo {
+    void mover();
+}
+
+public class Carro implements Veiculo {
+    @Override
+    public void mover() {
+        System.out.println("O carro está se movendo.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Veiculo carro = new Carro();
+        carro.mover();
+    }
+}
+```
 ### Maniputaçao de Strings
 ### Coleções e Arrays
 ### Entrada e Saida de dados
