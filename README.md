@@ -231,6 +231,30 @@ public class Main {
     }
 }
 ```
+### Elementos Principais da POO em Java
+
+1. Classe: Modelo ou "planta baixa" para criar objetos.
+``` java
+public class Pessoa {
+    String nome;
+    int idade;
+
+    public void apresentar() {
+        System.out.println("Meu nome é " + nome + " e tenho " + idade + " anos.");
+    }
+}
+```
+2. Objeto: Instância de uma classe.
+``` java
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa();
+        pessoa.nome = "Kleber";
+        pessoa.idade = 25;
+        pessoa.apresentar();
+    }
+}
+```
 ### Maniputaçao de Strings
 ### Coleções e Arrays
 ### Entrada e Saida de dados
