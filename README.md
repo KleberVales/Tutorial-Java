@@ -1,6 +1,6 @@
 # Tutorial-Java
 
-### Fundamentos da linguagem java
+## Fundamentos da linguagem java
 1. Código-Fonte (.java)
 2. Compilador (javac)
 3. byte code (.class)
@@ -20,7 +20,7 @@
 
 ```
    
-### Sintaxe do Java
+## Sintaxe do Java
 1. Estrutura Básica
    
 ``` java
@@ -138,8 +138,10 @@ Múltiplas linhas:
 
 ```
 
-### Programação Orientada a Objetos
+## Programação Orientada a Objetos
 A Programação Orientada a Objetos (POO) é um paradigma de programação baseado no conceito de objetos, que são instâncias de classes. Esses objetos encapsulam dados (atributos) e comportamentos (métodos), permitindo a modelagem de problemas do mundo real de forma mais intuitiva e modular.
+
+### Princípios Fundamentais da POO
 ### Maniputaçao de Strings
 ### Coleções e Arrays
 ### Entrada e Saida de dados
