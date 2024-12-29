@@ -288,6 +288,8 @@ String nome = "Kleber";
 
 ```
 
+### Métodos Comuns para Manipulação de Strings
+
 
 
 ### Coleções e Arrays
