@@ -274,6 +274,10 @@ public class Pessoa {
 }
 ```
 ### Maniputaçao de Strings
+
+A manipulação de strings em Java é uma tarefa comum e amplamente suportada pela classe String e por outras classes da biblioteca padrão, como StringBuilder e StringBuffer.
+
+
 ### Coleções e Arrays
 ### Entrada e Saida de dados
 ### Expressões Lambda
