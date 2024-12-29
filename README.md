@@ -280,6 +280,7 @@ A manipulação de strings em Java é uma tarefa comum e amplamente suportada pe
 ### Principais Características da Classe String
 
 - Imutabilidade: Uma instância de String não pode ser alterada após ser criada. Qualquer operação que modifique uma string cria uma nova instância.
+- Strings podem ser inicializadas diretamente usando aspas duplas (").
 
 
 
