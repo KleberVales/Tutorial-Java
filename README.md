@@ -290,6 +290,8 @@ String nome = "Kleber";
 
 ### Métodos Comuns para Manipulação de Strings
 
+1. Obter o Comprimento
+
 
 
 ### Coleções e Arrays
