@@ -292,6 +292,13 @@ String nome = "Kleber";
 
 1. Obter o Comprimento
 
+```java
+String texto = "Olá, mundo!";
+int tamanho = texto.length();
+System.out.println("Tamanho: " + tamanho); // Saída: 11
+
+```
+
 
 
 ### Coleções e Arrays
