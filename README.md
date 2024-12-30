@@ -299,6 +299,54 @@ System.out.println("Tamanho: " + tamanho); // Saída: 11
 
 ```
 
+2. Comparação
+   - equals: Compara conteúdo.
+   - equalsIgnoreCase: Ignora diferença de maiúsculas e minúsculas.
+  
+``` java
+String a = "Java";
+String b = "java";
+
+System.out.println(a.equals(b)); // false
+System.out.println(a.equalsIgnoreCase(b)); // true
+
+```
+
+3. Concatenar Strings
+   - Com o operador + ou concat.
+     
+``` java
+String nome = "Kleber";
+String saudacao = "Olá, " + nome;
+System.out.println(saudacao); // Olá, Kleber
+
+String saudacao2 = "Olá, ".concat(nome);
+System.out.println(saudacao2); // Olá, Kleber
+
+```
+
+4. Substring
+   - Extrai uma parte da string.
+  
+``` java
+String texto = "Programação em Java";
+String parte = texto.substring(14); // A partir do índice 14
+System.out.println(parte); // "Java"
+
+String parte2 = texto.substring(0, 12); // Do índice 0 ao 12 (exclusivo)
+System.out.println(parte2); // "Programação"
+
+```
+
+5. Transformar Maiúsculas e Minúsculas
+
+```java
+String texto = "Java";
+System.out.println(texto.toUpperCase()); // "JAVA"
+System.out.println(texto.toLowerCase()); // "java"
+
+```
+
 
 
 ### Coleções e Arrays
