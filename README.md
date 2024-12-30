@@ -300,8 +300,8 @@ System.out.println("Tamanho: " + tamanho); // Saída: 11
 ```
 
 2. Comparação
-   - equals: Compara conteúdo.
-   - equalsIgnoreCase: Ignora diferença de maiúsculas e minúsculas.
+- equals: Compara conteúdo.
+- equalsIgnoreCase: Ignora diferença de maiúsculas e minúsculas.
   
 ``` java
 String a = "Java";
@@ -313,7 +313,7 @@ System.out.println(a.equalsIgnoreCase(b)); // true
 ```
 
 3. Concatenar Strings
-   - Com o operador + ou concat.
+- Com o operador + ou concat.
      
 ``` java
 String nome = "Kleber";
@@ -326,7 +326,7 @@ System.out.println(saudacao2); // Olá, Kleber
 ```
 
 4. Substring
-   - Extrai uma parte da string.
+- Extrai uma parte da string.
   
 ``` java
 String texto = "Programação em Java";
