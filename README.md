@@ -426,6 +426,21 @@ int[] numeros = {1, 2, 3, 4, 5};
 System.out.println(numeros[0]); // Saída: 1
 
 ```
+### Percorrendo Arrays
+``` java
+int[] numeros = {1, 2, 3, 4, 5};
+
+// For tradicional
+for (int i = 0; i < numeros.length; i++) {
+    System.out.println(numeros[i]);
+}
+
+// For-each
+for (int num : numeros) {
+    System.out.println(num);
+}
+
+```
 
 ### Entrada e Saida de dados
 ### Expressões Lambda
