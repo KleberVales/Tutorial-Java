@@ -703,5 +703,79 @@ Uma expressão lambda tem a seguinte sintaxe básica:
   * Seta (->): Separador entre os parâmetros e o corpo da função.
   * Corpo: O código que será executado. Pode ser uma única expressão ou um bloco de código.
 
+### Interface Funcional
+
+Uma interface funcional é uma interface que possui apenas um método abstrato. Ela pode ter métodos default ou estáticos adicionais, mas somente um método abstrato.
+
+- Exemplo de Interface Funcional
+
+```java
+@FunctionalInterface
+interface Operacao {
+    int executar(int a, int b);
+}
+```
+
+### Exemplos Práticos
+
+1. Uso Básico com uma Interface Funcional
+```java
+@FunctionalInterface
+interface Operacao {
+    int executar(int a, int b);
+}
+
+public class LambdaExemplo {
+    public static void main(String[] args) {
+        // Implementação usando lambda
+        Operacao soma = (a, b) -> a + b;
+        Operacao multiplicacao = (a, b) -> a * b;
+
+        System.out.println("Soma: " + soma.executar(5, 3)); // Saída: 8
+        System.out.println("Multiplicação: " + multiplicacao.executar(5, 3)); // Saída: 15
+    }
+}
+```
+
+2. Com Runnable
+   
+Runnable é uma interface funcional usada para definir tarefas.
+
+```java
+public class LambdaRunnable {
+    public static void main(String[] args) {
+        // Sem lambda
+        Runnable tarefa1 = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Tarefa 1 executada");
+            }
+        };
+
+        // Com lambda
+        Runnable tarefa2 = () -> System.out.println("Tarefa 2 executada");
+
+        tarefa1.run();
+        tarefa2.run();
+    }
+}
+```
+
+3. Uso com Coleções
+3.1 Iteração com forEach
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class LambdaForeach {
+    public static void main(String[] args) {
+        List<String> nomes = Arrays.asList("João", "Maria", "Pedro");
+
+        // Iteração com lambda
+        nomes.forEach(nome -> System.out.println(nome));
+    }
+}
+```
+
 ## multithreading 
 ## Padrões de Projetos
