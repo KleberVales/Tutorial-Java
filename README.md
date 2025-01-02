@@ -346,6 +346,20 @@ System.out.println(texto.toUpperCase()); // "JAVA"
 System.out.println(texto.toLowerCase()); // "java"
 
 ```
+6. Procurar Caracteres ou Substrings
+
+- indexOf: Retorna a posição da primeira ocorrência.
+- lastIndexOf: Retorna a posição da última ocorrência.
+
+``` java
+String texto = "Java é divertido!";
+int posicao = texto.indexOf("é"); // 5
+System.out.println(posicao);
+
+int ultimaPosicao = texto.lastIndexOf("i"); // 13
+System.out.println(ultimaPosicao);
+
+```
 
 
 
