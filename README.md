@@ -441,6 +441,15 @@ for (int num : numeros) {
 }
 
 ```
+2. Coleções em Java
+
+Java fornece a API de coleções no pacote java.util, que inclui interfaces e classes para manipular listas, conjuntos e mapas.
+
+### Principais Interfaces
+
+- List: Coleção ordenada que permite elementos duplicados.
+- Set: Coleção que não permite duplicatas.
+- Map: Estrutura de chave-valor.
 
 ### Entrada e Saida de dados
 ### Expressões Lambda
