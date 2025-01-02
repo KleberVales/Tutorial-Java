@@ -407,7 +407,20 @@ System.out.println(texto.endsWith("divertido!")); // true
 
 
 
-### Coleções e Arrays
+## Coleções e Arrays
+Coleções e arrays são fundamentais em Java para armazenar, manipular e organizar dados. Enquanto arrays oferecem um mecanismo básico para armazenar elementos de forma estática, coleções fornecem ferramentas mais flexíveis e poderosas.
+
+1. Arrays em Java
+   
+Um array é uma estrutura de dados que armazena uma coleção de elementos do mesmo tipo, com tamanho fixo.
+
+### Declaração e Inicialização
+``` java
+int[] numeros = new int[5]; // Declaração com tamanho
+int[] valores = {10, 20, 30, 40, 50}; // Inicialização direta
+
+```
+
 ### Entrada e Saida de dados
 ### Expressões Lambda
 ### multithreading 
