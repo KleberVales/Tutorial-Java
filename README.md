@@ -378,6 +378,19 @@ System.out.println(texto.trim()); // "Olá, Java!"
 
 ```
 
+9. Dividir uma String
+
+- split: Divide uma string em partes com base em um delimitador.
+
+``` java
+String texto = "Java,Python,C++";
+String[] linguagens = texto.split(",");
+for (String linguagem : linguagens) {
+    System.out.println(linguagem);
+}
+
+```
+
 
 
 ### Coleções e Arrays
