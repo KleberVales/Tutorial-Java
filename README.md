@@ -796,5 +796,58 @@ public class LambdaStream {
 }
 ```
 
+- Com Comparator
+
+O Comparator é frequentemente usado para ordenação. Expressões lambda tornam sua implementação mais simples.
+
+```java
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+public class LambdaComparator {
+    public static void main(String[] args) {
+        List<String> nomes = Arrays.asList("João", "Maria", "Pedro");
+
+        // Ordenação por tamanho do nome
+        nomes.sort((a, b) -> Integer.compare(a.length(), b.length()));
+
+        System.out.println(nomes); // Saída: [João, Maria, Pedro]
+    }
+}
+```
+
+### Métodos de Referência
+
+Os métodos de referência são atalhos para expressões lambda comuns.
+
+- Tipos de Métodos de Referência
+
+1. Referência a um método estático: Classe::metodoEstatico
+2. Referência a um método de instância: objeto::metodo
+3. Referência a um método de instância de um objeto arbitrário: Classe::metodoInstancia
+4. Referência a um construtor: Classe::new
+
+- Exemplo
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class MetodoReferencia {
+    public static void main(String[] args) {
+        List<String> nomes = Arrays.asList("João", "Maria", "Pedro");
+
+        // Método de referência em vez de lambda
+        nomes.forEach(System.out::println);
+    }
+}
+```
+
+### Benefícios das Expressões Lambda
+
+- Redução do código boilerplate.
+- Maior legibilidade, especialmente em operações simples.
+- Integração com APIs modernas, como Streams.
+
 ## multithreading 
 ## Padrões de Projetos
