@@ -405,6 +405,32 @@ System.out.println(texto.endsWith("divertido!")); // true
 
 ```
 
+### Uso de StringBuilder e StringBuffer
+
+Essas classes são mutáveis e mais eficientes para operações repetitivas de manipulação de strings.
+
+1. StringBuilder
+
+Ideal para operações em um único thread.
+
+```java
+StringBuilder sb = new StringBuilder("Olá");
+sb.append(", mundo!"); // Adiciona texto
+System.out.println(sb); // "Olá, mundo!"
+
+```
+
+2. StringBuffer
+
+Semelhante ao StringBuilder, mas seguro para threads.
+
+```java
+StringBuffer sb = new StringBuffer("Olá");
+sb.append(", mundo!"); // Adiciona texto
+System.out.println(sb); // "Olá, mundo!"
+
+```
+
 
 
 ## Coleções e Arrays
@@ -447,9 +473,9 @@ Java fornece a API de coleções no pacote java.util, que inclui interfaces e cl
 
 ### Principais Interfaces
 
-- List: Coleção ordenada que permite elementos duplicados.
-- Set: Coleção que não permite duplicatas.
-- Map: Estrutura de chave-valor.
+- List: Coleção ordenada que permite elementos duplicados. classes: ArrayList, LinkedList.
+- Set: Coleção que não permite duplicatas. classes: HashSet, TreeSet
+- Map: Estrutura de chave-valor. classes: HashMap, TreeMap
 
 ### Entrada e Saida de dados
 ### Expressões Lambda
