@@ -762,6 +762,7 @@ public class LambdaRunnable {
 ```
 
 3. Uso com Coleções
+   
 3.1 Iteração com forEach
 ```java
 import java.util.Arrays;
