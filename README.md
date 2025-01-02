@@ -391,6 +391,20 @@ for (String linguagem : linguagens) {
 
 ```
 
+10. Verificar Conteúdo
+
+- contains: Verifica se a string contém uma substring.
+- startsWith: Verifica se a string começa com algo.
+- endsWith: Verifica se a string termina com algo.
+
+``` java
+String texto = "Aprender Java é divertido!";
+System.out.println(texto.contains("Java")); // true
+System.out.println(texto.startsWith("Aprender")); // true
+System.out.println(texto.endsWith("divertido!")); // true
+
+```
+
 
 
 ### Coleções e Arrays
