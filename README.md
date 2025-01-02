@@ -928,6 +928,32 @@ public class RunnableExemplo {
 
 ```
 
+- Usando Expressões Lambda
+
+Como Runnable é uma interface funcional, você pode usar expressões lambda para simplificar o código.
+
+Exemplo
+
+```java
+public class LambdaExemplo {
+    public static void main(String[] args) {
+        Thread thread = new Thread(() -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Executando Lambda: " + i);
+                try {
+                    Thread.sleep(1000); // Pausa de 1 segundo
+                } catch (InterruptedException e) {
+                    System.out.println("Lambda interrompido");
+                }
+            }
+        });
+
+        thread.start();
+    }
+}
+
+```
+
 
 
 ## Padrões de Projetos
