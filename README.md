@@ -360,6 +360,13 @@ int ultimaPosicao = texto.lastIndexOf("i"); // 13
 System.out.println(ultimaPosicao);
 
 ```
+7. Substituir Caracteres ou Substrings
+```java
+String texto = "Java é legal!";
+String novoTexto = texto.replace("legal", "incrível");
+System.out.println(novoTexto); // "Java é incrível!"
+
+```
 
 
 
