@@ -594,6 +594,98 @@ public class SaidaFormatada {
 |%.2f |	Número de ponto flutuante com 2 casas decimais. |
 |%n	| Quebra de linha (plataforma independente). |
 
+### Entrada e Saída de Arquivos
+
+A leitura e escrita em arquivos pode ser feita com várias classes, como FileReader, FileWriter, BufferedReader, e BufferedWriter.
+
+1. Escrever em um Arquivo
+
+```java
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class EscreverArquivo {
+    public static void main(String[] args) {
+        try (FileWriter writer = new FileWriter("saida.txt")) {
+            writer.write("Olá, este é um exemplo de escrita em arquivo.");
+            System.out.println("Arquivo escrito com sucesso!");
+        } catch (IOException e) {
+            System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
+        }
+    }
+}
+
+```
+
+2. Ler de um Arquivo
+
+``` java
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class LerArquivo {
+    public static void main(String[] args) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("saida.txt"))) {
+            String linha;
+            while ((linha = reader.readLine()) != null) {
+                System.out.println(linha);
+            }
+        } catch (IOException e) {
+            System.err.println("Erro ao ler o arquivo: " + e.getMessage());
+        }
+    }
+}
+
+```
+### Entrada e Saída com Dados Binários
+
+Para manipulação de dados binários, você pode usar DataInputStream e DataOutputStream.
+
+- Exemplo - Escrevendo Dados Binários
+
+```java
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class EscreverBinario {
+    public static void main(String[] args) {
+        try (DataOutputStream output = new DataOutputStream(new FileOutputStream("dados.bin"))) {
+            output.writeInt(123);
+            output.writeDouble(45.67);
+            output.writeUTF("Olá, binário!");
+            System.out.println("Dados gravados com sucesso!");
+        } catch (IOException e) {
+            System.err.println("Erro ao gravar os dados: " + e.getMessage());
+        }
+    }
+}
+```
+- Exemplo - Lendo Dados Binários
+
+```java
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class LerBinario {
+    public static void main(String[] args) {
+        try (DataInputStream input = new DataInputStream(new FileInputStream("dados.bin"))) {
+            int numero = input.readInt();
+            double valor = input.readDouble();
+            String texto = input.readUTF();
+
+            System.out.println("Número: " + numero);
+            System.out.println("Valor: " + valor);
+            System.out.println("Texto: " + texto);
+        } catch (IOException e) {
+            System.err.println("Erro ao ler os dados: " + e.getMessage());
+        }
+    }
+}
+```
+
 ### Expressões Lambda
 ### multithreading 
 ### Padrões de Projetos
