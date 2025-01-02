@@ -966,5 +966,11 @@ public class LambdaExemplo {
 | setPriority(int priority)	| Define a prioridade da thread. |
 | interrupt()	| Interrompe uma thread em execução. |
 
+### Multithreading
+
+Multithreading em Java é uma técnica que permite que várias partes de um programa sejam executadas simultaneamente. Isso é feito criando e gerenciando múltiplas threads, que são pequenas unidades de execução dentro de um processo.
+
+#### O Que é Multithreading?
+
 
 ## Padrões de Projetos
