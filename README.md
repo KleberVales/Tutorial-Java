@@ -1217,3 +1217,44 @@ public class ExecutorExemplo {
 
 
 ## Padrões de Projetos
+
+Design Patterns são soluções reutilizáveis para problemas comuns no desenvolvimento de software. Eles ajudam a criar sistemas flexíveis, escaláveis e de fácil manutenção. Java, sendo uma linguagem amplamente usada, possui suporte nativo para implementar vários padrões de design.
+
+Abaixo, estão os principais tipos de design patterns e exemplos práticos em Java:
+
+### Categorias de Design Patterns
+
+1. Creational (Criação): Focados na criação de objetos.
+
+- Singleton
+- Factory Method
+- Abstract Factory
+- Builder
+- Prototype
+
+2. Structural (Estrutural): Lidam com a composição de classes e objetos.
+
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Proxy
+
+3. Behavioral (Comportamental): Focados na comunicação entre objetos.
+
+- Chain of Responsibility
+- Command
+- Interpreter
+- Iterator
+- Mediator
+- Memento
+- Observer
+- State
+- Strategy
+- Template Method
+- Visitor
+
+
+
