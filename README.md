@@ -686,6 +686,22 @@ public class LerBinario {
 }
 ```
 
-### Expressões Lambda
-### multithreading 
-### Padrões de Projetos
+## Expressões Lambda
+
+As expressões lambda em Java foram introduzidas no Java 8 como parte da programação funcional e tornam o código mais conciso e legível. Lambdas são essencialmente funções anônimas que podem ser usadas para implementar métodos de interfaces funcionais.
+
+### Estrutura de uma Expressão Lambda
+
+Uma expressão lambda tem a seguinte sintaxe básica:
+
+```java
+(parametros) -> { corpo }
+
+```
+- Componentes
+  * Parâmetros: A lista de entradas para a função. Parênteses podem ser omitidos se houver apenas um parâmetro.
+  * Seta (->): Separador entre os parâmetros e o corpo da função.
+  * Corpo: O código que será executado. Pode ser uma única expressão ou um bloco de código.
+
+## multithreading 
+## Padrões de Projetos
