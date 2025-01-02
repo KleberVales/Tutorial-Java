@@ -550,6 +550,50 @@ public class EntradaBufferedReader {
 
 ### Saída de Dados
 
+A saída de dados em Java é feita principalmente com as classes System.out.
+
+1. Usando System.out.print e System.out.println
+
+- print: Exibe texto na mesma linha.
+- println: Exibe texto e quebra a linha.
+
+- Exemplo
+
+``` java
+public class SaidaSimples {
+    public static void main(String[] args) {
+        System.out.print("Este é um texto ");
+        System.out.println("com uma quebra de linha.");
+    }
+}
+
+```
+
+2. Formatação de Saída com printf
+
+O método printf permite formatação detalhada da saída.
+
+- Exemplo - Saída Formatada
+
+```java
+public class SaidaFormatada {
+    public static void main(String[] args) {
+        String nome = "Kleber";
+        int idade = 30;
+        double salario = 2500.50;
+
+        System.out.printf("Nome: %s, Idade: %d, Salário: %.2f%n", nome, idade, salario);
+    }
+}
+```
+| Placeholder |	Descrição |
+|-------------|------------|
+|%s	 | String. |
+|%d	| Inteiro decimal. |
+|%f	| Número de ponto flutuante (float/double). |
+|%.2f |	Número de ponto flutuante com 2 casas decimais. |
+|%n	| Quebra de linha (plataforma independente). |
+
 ### Expressões Lambda
 ### multithreading 
 ### Padrões de Projetos
