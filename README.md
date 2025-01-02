@@ -524,6 +524,32 @@ public class EntradaScanner {
 | nextDouble()|	Lê um número decimal (double).            |
 | nextBoolean()|	Lê um valor booleano (true ou false).   |
 
+2. Usando BufferedReader
+
+BufferedReader é uma maneira mais eficiente para leitura de grandes volumes de dados.
+
+- Exemplo - Leitura com BufferedReader
+
+``` java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class EntradaBufferedReader {
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Digite seu nome: ");
+        String nome = reader.readLine();
+
+        System.out.println("Olá, " + nome + "!");
+    }
+}
+
+```
+
+### Saída de Dados
+
 ### Expressões Lambda
 ### multithreading 
 ### Padrões de Projetos
