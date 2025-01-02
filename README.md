@@ -850,4 +850,51 @@ public class MetodoReferencia {
 - Integração com APIs modernas, como Streams.
 
 ## multithreading 
+
+### Thread
+
+Trabalhar com Threads em Java permite que você realize multitarefas em um programa, ou seja, execute várias tarefas simultaneamente. Isso é útil em aplicações que exigem desempenho, como servidores, jogos ou sistemas com operações complexas.
+
+1. O Que é Uma Thread?
+
+- Uma Thread é a menor unidade de processamento que pode ser gerenciada pelo sistema operacional.
+- Em Java, você pode criar e gerenciar threads para realizar tarefas concorrentes.
+
+2. Criando Threads em Java
+
+- Extender a Classe Thread
+
+Você pode criar uma classe que estenda a classe Thread e sobrescrever o método run().
+
+Exemplo
+
+```java
+class MinhaThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Executando thread: " + i);
+            try {
+                Thread.sleep(1000); // Pausa de 1 segundo
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrompida");
+            }
+        }
+    }
+}
+
+public class ThreadExemplo {
+    public static void main(String[] args) {
+        MinhaThread thread1 = new MinhaThread();
+        MinhaThread thread2 = new MinhaThread();
+
+        thread1.start();
+        thread2.start();
+    }
+}
+
+```
+
+
+
 ## Padrões de Projetos
