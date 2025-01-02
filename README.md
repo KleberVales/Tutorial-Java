@@ -477,7 +477,52 @@ Java fornece a API de coleções no pacote java.util, que inclui interfaces e cl
 - Set: Coleção que não permite duplicatas. classes: HashSet, TreeSet
 - Map: Estrutura de chave-valor. classes: HashMap, TreeMap
 
-### Entrada e Saida de dados
+## Entrada e Saida de dados
+
+Em Java, a entrada e saída de dados é realizada por meio das classes fornecidas no pacote java.io e da biblioteca padrão. Aqui estão os conceitos principais:
+
+### Entrada de Dados
+
+A entrada de dados pode ser feita de várias formas, dependendo do contexto.
+
+1. Usando Scanner
+
+A classe Scanner é a maneira mais comum de ler dados do usuário via console.
+
+- Exemplo - Leitura de Inteiros e Strings
+```java
+import java.util.Scanner;
+
+public class EntradaScanner {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Lendo um número inteiro
+        System.out.print("Digite um número inteiro: ");
+        int numero = scanner.nextInt();
+
+        // Limpando o buffer (necessário ao alternar entre nextInt/nextLine)
+        scanner.nextLine();
+
+        // Lendo uma string
+        System.out.print("Digite seu nome: ");
+        String nome = scanner.nextLine();
+
+        System.out.println("Olá, " + nome + "! Você digitou o número " + numero + ".");
+        scanner.close();
+    }
+}
+
+```
+- Principais Métodos de Scanner
+
+| Método	Descrição
+| nextLine()	| Lê uma linha inteira como String.         |
+| next()	    | Lê a próxima palavra como String.         |
+| nextInt()	  | Lê um número inteiro.                     |
+| nextDouble()|	Lê um número decimal (double).            |
+| nextBoolean()|	Lê um valor booleano (true ou false).   |
+
 ### Expressões Lambda
 ### multithreading 
 ### Padrões de Projetos
