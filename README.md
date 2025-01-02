@@ -420,6 +420,12 @@ int[] numeros = new int[5]; // Declaração com tamanho
 int[] valores = {10, 20, 30, 40, 50}; // Inicialização direta
 
 ```
+### Acessar Elementos
+```java
+int[] numeros = {1, 2, 3, 4, 5};
+System.out.println(numeros[0]); // Saída: 1
+
+```
 
 ### Entrada e Saida de dados
 ### Expressões Lambda
