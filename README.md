@@ -895,6 +895,39 @@ public class ThreadExemplo {
 
 ```
 
+- Implementar a Interface Runnable
+
+Outra abordagem é implementar a interface Runnable e passar a instância para um objeto Thread.
+
+Exemplo
+
+```java
+class MinhaRunnable implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Executando Runnable: " + i);
+            try {
+                Thread.sleep(1000); // Pausa de 1 segundo
+            } catch (InterruptedException e) {
+                System.out.println("Runnable interrompido");
+            }
+        }
+    }
+}
+
+public class RunnableExemplo {
+    public static void main(String[] args) {
+        Thread thread1 = new Thread(new MinhaRunnable());
+        Thread thread2 = new Thread(new MinhaRunnable());
+
+        thread1.start();
+        thread2.start();
+    }
+}
+
+```
+
 
 
 ## Padrões de Projetos
