@@ -368,6 +368,16 @@ System.out.println(novoTexto); // "Java é incrível!"
 
 ```
 
+8. Remover Espaços
+
+- trim: Remove espaços no início e no fim.
+
+``` java
+String texto = "   Olá, Java!   ";
+System.out.println(texto.trim()); // "Olá, Java!"
+
+```
+
 
 
 ### Coleções e Arrays
