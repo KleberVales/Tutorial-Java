@@ -954,6 +954,17 @@ public class LambdaExemplo {
 
 ```
 
+3. Métodos Importantes da Classe Thread
+
+| Método |	Descrição |
+|--------|------------|
+| start()	| Inicia a execução da thread. |
+| run()	| Contém o código que será executado pela thread. |
+| sleep(long millis)	| Faz a thread "dormir" por um tempo especificado. |
+| join()	| Faz a thread atual aguardar a conclusão de outra. |
+| isAlive()	| Verifica se a thread ainda está em execução. |
+| setPriority(int priority)	| Define a prioridade da thread. |
+| interrupt()	| Interrompe uma thread em execução. |
 
 
 ## Padrões de Projetos
