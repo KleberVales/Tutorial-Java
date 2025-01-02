@@ -763,7 +763,7 @@ public class LambdaRunnable {
 
 3. Uso com Coleções
    
-3.1 Iteração com forEach
+- Iteração com forEach
 ```java
 import java.util.Arrays;
 import java.util.List;
@@ -774,6 +774,24 @@ public class LambdaForeach {
 
         // Iteração com lambda
         nomes.forEach(nome -> System.out.println(nome));
+    }
+}
+```
+
+- Filtragem com Stream
+
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class LambdaStream {
+    public static void main(String[] args) {
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+        // Filtrando números pares e imprimindo
+        numeros.stream()
+               .filter(n -> n % 2 == 0)
+               .forEach(System.out::println); // Saída: 2 4 6
     }
 }
 ```
