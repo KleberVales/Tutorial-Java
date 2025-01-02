@@ -981,5 +981,239 @@ Multithreading em Java é uma técnica que permite que várias partes de um prog
 - Maior responsividade em aplicações, como interfaces gráficas.
 - Permite a execução de tarefas simultâneas, como download e processamento.
 
+#### Estrutura de Threads em Java
+
+1. Classe Thread
+
+Java fornece a classe Thread para criar e gerenciar threads.
+
+2. Interface Runnable
+   
+A interface Runnable é usada para definir o código que será executado por uma thread.
+
+#### Criando Threads em Java
+
+1. Extender a Classe Thread
+
+Uma maneira simples de criar uma thread é extender a classe Thread e sobrescrever o método run().
+
+Exemplo
+```java
+class MinhaThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Executando thread: " + i);
+            try {
+                Thread.sleep(500); // Pausa de 500ms
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrompida");
+            }
+        }
+    }
+}
+
+public class MultithreadingExemplo {
+    public static void main(String[] args) {
+        MinhaThread thread1 = new MinhaThread();
+        MinhaThread thread2 = new MinhaThread();
+
+        thread1.start();
+        thread2.start();
+    }
+}
+```
+
+2. Implementar a Interface Runnable
+
+Outra abordagem é implementar a interface Runnable, que permite maior flexibilidade.
+
+Exemplo
+```java
+
+class MinhaRunnable implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Executando Runnable: " + i);
+            try {
+                Thread.sleep(500); // Pausa de 500ms
+            } catch (InterruptedException e) {
+                System.out.println("Runnable interrompido");
+            }
+        }
+    }
+}
+
+public class RunnableExemplo {
+    public static void main(String[] args) {
+        Thread thread1 = new Thread(new MinhaRunnable());
+        Thread thread2 = new Thread(new MinhaRunnable());
+
+        thread1.start();
+        thread2.start();
+    }
+}
+
+```
+
+3. Usando Expressões Lambda
+
+Como a interface Runnable é funcional, você pode usar expressões lambda para simplificar o código.
+
+Exemplo
+
+```java
+public class LambdaExemplo {
+    public static void main(String[] args) {
+        Thread thread = new Thread(() -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Executando Lambda: " + i);
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    System.out.println("Lambda interrompido");
+                }
+            }
+        });
+
+        thread.start();
+    }
+}
+```
+
+#### Sincronização de Threads
+
+Quando várias threads acessam o mesmo recurso, pode haver problemas de consistência. A sincronização é usada para evitar isso.
+
+1. Bloco synchronized
+
+Exemplo
+```java
+class Contador {
+    private int valor = 0;
+
+    public synchronized void incrementar() {
+        valor++;
+    }
+
+    public int getValor() {
+        return valor;
+    }
+}
+
+public class SincronizacaoExemplo {
+    public static void main(String[] args) {
+        Contador contador = new Contador();
+
+        Thread thread1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                contador.incrementar();
+            }
+        });
+
+        Thread thread2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                contador.incrementar();
+            }
+        });
+
+        thread1.start();
+        thread2.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            System.out.println("Thread interrompida");
+        }
+
+        System.out.println("Valor final: " + contador.getValor()); // Saída: 2000
+    }
+}
+```
+
+2. Usando ReentrantLock
+
+O ReentrantLock fornece controle mais granular sobre os bloqueios.
+
+Exemplo
+```java
+import java.util.concurrent.locks.ReentrantLock;
+
+class ContadorLock {
+    private int valor = 0;
+    private final ReentrantLock lock = new ReentrantLock();
+
+    public void incrementar() {
+        lock.lock();
+        try {
+            valor++;
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public int getValor() {
+        return valor;
+    }
+}
+
+public class LockExemplo {
+    public static void main(String[] args) {
+        ContadorLock contador = new ContadorLock();
+
+        Thread thread1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                contador.incrementar();
+            }
+        });
+
+        Thread thread2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                contador.incrementar();
+            }
+        });
+
+        thread1.start();
+        thread2.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            System.out.println("Thread interrompida");
+        }
+
+        System.out.println("Valor final: " + contador.getValor()); // Saída: 2000
+    }
+}
+```
+
+#### Executor Framework
+
+O pacote java.util.concurrent fornece uma maneira mais eficiente de gerenciar threads, usando o Executor Framework.
+
+Exemplo com ExecutorService
+
+```java
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ExecutorExemplo {
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+
+        Runnable tarefa1 = () -> System.out.println("Executando tarefa 1");
+        Runnable tarefa2 = () -> System.out.println("Executando tarefa 2");
+
+        executor.submit(tarefa1);
+        executor.submit(tarefa2);
+
+        executor.shutdown(); // Finaliza o executor
+    }
+}
+```
+
 
 ## Padrões de Projetos
