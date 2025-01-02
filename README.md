@@ -972,5 +972,14 @@ Multithreading em Java é uma técnica que permite que várias partes de um prog
 
 #### O Que é Multithreading?
 
+- Thread: Uma thread é a menor unidade de execução em um programa.
+- Multithreading: Refere-se à execução simultânea de múltiplas threads em um único processo. Cada thread pode executar uma tarefa diferente ao mesmo tempo.
+
+#### Vantagens do Multithreading
+
+- Melhor desempenho em sistemas multicore.
+- Maior responsividade em aplicações, como interfaces gráficas.
+- Permite a execução de tarefas simultâneas, como download e processamento.
+
 
 ## Padrões de Projetos
