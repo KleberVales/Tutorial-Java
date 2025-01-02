@@ -1256,5 +1256,248 @@ Abaixo, estão os principais tipos de design patterns e exemplos práticos em Ja
 - Template Method
 - Visitor
 
+### Exemplos de Design Patterns
+
+1. Singleton Pattern (Creational)
+
+Garante que uma classe tenha apenas uma instância e fornece um ponto global de acesso a ela.
+
+Exemplo
+```java
+
+public class Singleton {
+    private static Singleton instanciaUnica;
+
+    private Singleton() {
+        // Construtor privado
+    }
+
+    public static Singleton getInstance() {
+        if (instanciaUnica == null) {
+            instanciaUnica = new Singleton();
+        }
+        return instanciaUnica;
+    }
+}
+
+public class TesteSingleton {
+    public static void main(String[] args) {
+        Singleton obj1 = Singleton.getInstance();
+        Singleton obj2 = Singleton.getInstance();
+
+        System.out.println(obj1 == obj2); // Saída: true
+    }
+}
+
+```
+
+2. Factory Method (Creational)
+
+Define uma interface para criar objetos, mas permite que subclasses decidam qual classe instanciar.
+
+Exemplo
+
+```java
+abstract class Produto {
+    public abstract void usar();
+}
+
+class ProdutoA extends Produto {
+    @Override
+    public void usar() {
+        System.out.println("Usando Produto A");
+    }
+}
+
+class ProdutoB extends Produto {
+    @Override
+    public void usar() {
+        System.out.println("Usando Produto B");
+    }
+}
+
+abstract class Criador {
+    public abstract Produto criarProduto();
+}
+
+class CriadorA extends Criador {
+    @Override
+    public Produto criarProduto() {
+        return new ProdutoA();
+    }
+}
+
+class CriadorB extends Criador {
+    @Override
+    public Produto criarProduto() {
+        return new ProdutoB();
+    }
+}
+
+public class TesteFactoryMethod {
+    public static void main(String[] args) {
+        Criador criadorA = new CriadorA();
+        Produto produtoA = criadorA.criarProduto();
+        produtoA.usar();
+
+        Criador criadorB = new CriadorB();
+        Produto produtoB = criadorB.criarProduto();
+        produtoB.usar();
+    }
+}
+
+```
+
+3. Observer Pattern (Behavioral)
+
+Define uma dependência um-para-muitos entre objetos, de modo que, quando um objeto muda de estado, todos os seus dependentes são notificados.
+
+Exemplo
+
+```java
+
+import java.util.ArrayList;
+import java.util.List;
+
+interface Observador {
+    void atualizar(String mensagem);
+}
+
+class Observado {
+    private List<Observador> observadores = new ArrayList<>();
+
+    public void adicionarObservador(Observador observador) {
+        observadores.add(observador);
+    }
+
+    public void notificarObservadores(String mensagem) {
+        for (Observador observador : observadores) {
+            observador.atualizar(mensagem);
+        }
+    }
+}
+
+class Cliente implements Observador {
+    private String nome;
+
+    public Cliente(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public void atualizar(String mensagem) {
+        System.out.println(nome + " recebeu: " + mensagem);
+    }
+}
+
+public class TesteObserver {
+    public static void main(String[] args) {
+        Observado loja = new Observado();
+
+        Cliente cliente1 = new Cliente("Alice");
+        Cliente cliente2 = new Cliente("Bob");
+
+        loja.adicionarObservador(cliente1);
+        loja.adicionarObservador(cliente2);
+
+        loja.notificarObservadores("Nova promoção disponível!");
+    }
+}
+
+```
+
+4. Strategy Pattern (Behavioral)
+
+Define uma família de algoritmos, encapsula cada um deles e os torna intercambiáveis.
+
+Exemplo
+```java
+interface EstrategiaPagamento {
+    void pagar(int valor);
+}
+
+class PagamentoCartaoCredito implements EstrategiaPagamento {
+    @Override
+    public void pagar(int valor) {
+        System.out.println("Pagamento de " + valor + " realizado com cartão de crédito.");
+    }
+}
+
+class PagamentoPaypal implements EstrategiaPagamento {
+    @Override
+    public void pagar(int valor) {
+        System.out.println("Pagamento de " + valor + " realizado com PayPal.");
+    }
+}
+
+class ContextoPagamento {
+    private EstrategiaPagamento estrategia;
+
+    public void setEstrategia(EstrategiaPagamento estrategia) {
+        this.estrategia = estrategia;
+    }
+
+    public void executarPagamento(int valor) {
+        estrategia.pagar(valor);
+    }
+}
+
+public class TesteStrategy {
+    public static void main(String[] args) {
+        ContextoPagamento contexto = new ContextoPagamento();
+
+        contexto.setEstrategia(new PagamentoCartaoCredito());
+        contexto.executarPagamento(100);
+
+        contexto.setEstrategia(new PagamentoPaypal());
+        contexto.executarPagamento(200);
+    }
+}
+```
+
+5. Decorator Pattern (Structural)
+
+Adiciona responsabilidades a um objeto dinamicamente.
+
+Exemplo
+```
+java
+interface Componente {
+    void executar();
+}
+
+class ComponenteBase implements Componente {
+    @Override
+    public void executar() {
+        System.out.println("Executando componente base");
+    }
+}
+
+class Decorador implements Componente {
+    private Componente componente;
+
+    public Decorador(Componente componente) {
+        this.componente = componente;
+    }
+
+    @Override
+    public void executar() {
+        componente.executar();
+        System.out.println("Executando funcionalidade adicional");
+    }
+}
+
+public class TesteDecorator {
+    public static void main(String[] args) {
+        Componente componente = new ComponenteBase();
+        Componente componenteDecorado = new Decorador(componente);
+
+        componente.executar(); // Apenas o componente base
+        componenteDecorado.executar(); // Base + funcionalidade adicional
+    }
+}
+
+```
+
 
 
