@@ -516,7 +516,8 @@ public class EntradaScanner {
 ```
 - Principais Métodos de Scanner
 
-| Método	Descrição
+| Método	  |              Descrição                 |
+|------------------|---------------------------------------|
 | nextLine()	| Lê uma linha inteira como String.         |
 | next()	    | Lê a próxima palavra como String.         |
 | nextInt()	  | Lê um número inteiro.                     |
