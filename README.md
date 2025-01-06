@@ -46,6 +46,13 @@
      |  int	|  32	            |-2,147,483,648	| 2,147,483,647|
      | long	| 64	            |-9,223,372,036,854,775,808	| 9,223,372,036,854,775,807|
 
+     b) Numéricos de Ponto Flutuante
+
+     | Tipo	| Tamanho (bits)	| Valor Mínimo	| Valor Máximo	|Precisão Decimal |
+     |------|-----------------|---------------|---------------|-----------------|
+     |float	| 32	            |~1.4E-45       |	~3.4E+38      |	~6-7  dígitos|
+     |double|64             	|~4.9E-324      |	~1.8E+308	    |~15 dígitos
+
 ``` java
 int numero = 10;         // Inteiro
 double pi = 3.14;        // Número decimal
