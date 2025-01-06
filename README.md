@@ -32,6 +32,20 @@
 
 ```
 2. Variáveis
+   No Java, os tipos de variáveis podem ser divididos em tipos primitivos e referências de objetos. Aqui está um resumo detalhado:
+
+   - Tipos Primitivos
+     São os tipos de dados básicos, que armazenam valores diretamente na memória. Existem 8 tipos primitivos no Java:
+
+     a) Numéricos Inteiros
+     
+     | Tipo |	Tamanho (bits)	| Valor Mínimo	| Valor Máximo |
+     |------|-----------------|---------------|--------------|
+     |byte	| 8	              |-128	          |    127       |
+     | short|	16	            | -32,768	      | 32,767       |
+     |  int	|  32	            |-2,147,483,648	| 2,147,483,647|
+     | long	| 64	            |-9,223,372,036,854,775,808	| 9,223,372,036,854,775,807|
+
 ``` java
 int numero = 10;         // Inteiro
 double pi = 3.14;        // Número decimal
